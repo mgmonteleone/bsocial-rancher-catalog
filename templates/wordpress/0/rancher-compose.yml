@@ -7,15 +7,21 @@
     - variable : "PORT"
       label : "Mapped Port"
       description : "The port that the loadbalancer will use to access the instance"
+      type : int
     - variable : "NAME"
       label : "Instance Name"
       decription : "The instance name, used to find the folder to mount."
+      type: string
     - variable : "DBNAME"
       label : "Database Name"
       descrption : "Should be the instance name with underscores"
+      type: string
     - variable : "PAGESPEED"
       label : "Enable Pagespeed?"
-
+      type: enum
+      options :
+        - on
+        - off
 wp-bsocial-new:
   scale: 2
   health_check:

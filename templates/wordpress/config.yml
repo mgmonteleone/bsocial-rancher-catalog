@@ -2,7 +2,7 @@ name: Wordpress
 description: bSocial Base Wordpress
 version: 2.1
 category: Web
-maintainer: bsocial.io
-license: Proprietar
+maintainer: mgm@bsocial.io
+license: Proprietary
 projectURL: http://www.bsocial.io
-description: Very cool.
+description: Optimized NGINX based Wordpress Template, using mounted files and memcached.
