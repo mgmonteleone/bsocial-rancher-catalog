@@ -1,4 +1,4 @@
-.catalog
+.catalog:
   name: "Wordpress"
   version: "v2.1"
   description: "NGINX PHP-FPM Wordpress with mounted files"
