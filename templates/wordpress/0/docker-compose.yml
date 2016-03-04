@@ -1,0 +1,17 @@
+wp-bsocial-new:
+  ports:
+  - ${PORT}:80/tcp
+  environment:
+    app_name: ${NAME}
+    enable_pagespeed: ${PAGESPEED}
+    SESSION_MCACHE_SERVS: tcp://wp-memcached:11211
+    WP_DB_HOST: wp-galeria-lb
+    WP_DB_NAME : ${DBNAME}
+  external_links:
+  - couchbase/memached-cb:wp-memcached
+  tty: true
+  image: eu.gcr.io/carbide-ratio-704/${NAME}:latest
+  volumes:
+  - /web/${NAME}:/usr/share/nginx/html
+  - /logs/${NAME}:/var/log/nginx
+  stdin_open: true
