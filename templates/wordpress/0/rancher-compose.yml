@@ -6,22 +6,28 @@
   questions:
     - variable : "PORT"
       label : "Mapped Port"
-      description : "The port that the loadbalancer will use to access the instance"
+      description : "The port that the loadbalancer will use to access the instance."
       type : int
+      required : true
     - variable : "NAME"
       label : "Instance Name"
-      decription : "The instance name, used to find the folder to mount."
+      description : "The instance name, used to find the folder to mount. (/web/[instance name])."
       type: string
+      required : true
     - variable : "DBNAME"
       label : "Database Name"
-      descrption : "Should be the instance name with underscores"
+      description : "Should be the instance name with underscores."
       type: string
+      required : true
     - variable : "PAGESPEED"
       label : "Enable Pagespeed?"
+      description : "Should pagespeed be used automatically to enhance performance?"
       type: enum
+      required : true
       options :
         - on
         - off
+      default : on
 wp-bsocial-new:
   scale: 2
   health_check:
