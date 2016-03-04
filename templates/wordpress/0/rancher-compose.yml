@@ -1,13 +1,3 @@
-wp-bsocial-new:
-  scale: 2
-  health_check:
-    port: 80
-    interval: 10000
-    unhealthy_threshold: 3
-    strategy: recreate
-    healthy_threshold: 2
-    response_timeout: 25
-
 .catalog
   name: "Wordpress" # Name of the versioned template of the Catalog Entry
   version: "v2.1" # Version of the versioned template of the Catalog Entry
@@ -25,7 +15,14 @@ wp-bsocial-new:
       descrption : "Should be the instance name with underscores"
     - variable : "PAGESPEED"
       label : "Enable Pagespeed?"
-      type: enum
-      options :
-        - "on"
-        - "off"
+
+wp-bsocial-new:
+  scale: 2
+  health_check:
+    port: 80
+    interval: 10000
+    unhealthy_threshold: 3
+    strategy: recreate
+    healthy_threshold: 2
+    response_timeout: 25
+
