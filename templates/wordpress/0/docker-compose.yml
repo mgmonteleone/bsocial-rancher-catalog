@@ -15,3 +15,14 @@ wp-bsocial-new:
   - /web/${NAME}:/usr/share/nginx/html
   - /logs/${NAME}:/var/log/nginx
   stdin_open: true
+
+wp-mysql:
+  external_links:
+  - mysql-cluster/galera:galera
+  expose:
+  - :3307/tcp
+  labels:
+    io.rancher.scheduler.global: 'true'
+  tty: true
+  image: rancher/load-balancer-service
+  stdin_open: true
