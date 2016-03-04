@@ -1,0 +1,52 @@
+.catalog:
+  name: "Wordpress"
+  version: "v2.2"
+  description: "NGINX PHP-FPM Wordpress with mounted files"
+  uuid: wordpress-1
+  questions:
+    - variable : "PORT"
+      label : "Mapped Port"
+      description : "The port that the loadbalancer will use to access the instance."
+      type : int
+      required : true
+    - variable : "NAME"
+      label : "Instance Name"
+      description : "The instance name, used to find the folder to mount. (/web/[instance name])."
+      type: string
+      required : true
+    - variable : "DBNAME"
+      label : "Database Name"
+      description : "Should be the instance name with underscores."
+      type: string
+      required : true
+    - variable : "PAGESPEED"
+      label : "Enable Pagespeed?"
+      description : "Should pagespeed be used automatically to enhance performance?"
+      type: enum
+      required : true
+      options :
+        - on
+        - off
+      default : on
+wp-bsocial-new:
+  scale: 2
+  health_check:
+    port: 80
+    interval: 10000
+    unhealthy_threshold: 3
+    strategy: recreate
+    healthy_threshold: 2
+    response_timeout: 100
+  metadata:
+    io.rancher.service.hash: 7104b3122ec3d0e3319d394072bca44a84d315be
+
+wp-mysql:
+  load_balancer_config:
+    haproxy_config: {}
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+
