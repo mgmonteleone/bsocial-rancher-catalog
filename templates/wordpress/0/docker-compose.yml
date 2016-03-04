@@ -9,6 +9,8 @@ wp-bsocial-new:
     WP_DB_NAME : ${DBNAME}
   external_links:
   - couchbase/memached-cb:wp-memcached
+  labels:
+    io.rancher.service.hash: 82e0be0df2694d524855865755046abea211c1ea
   tty: true
   image: eu.gcr.io/carbide-ratio-704/${NAME}:latest
   volumes:
@@ -18,9 +20,9 @@ wp-bsocial-new:
 
 wp-mysql:
   external_links:
-  - mysql-cluster/galera:galera
+  - mysql-cluster/wp-galera-lb:wp-galera-lb
   expose:
-  - :3307/tcp
+  - 3306:3306/tcp
   labels:
     io.rancher.scheduler.global: 'true'
   tty: true

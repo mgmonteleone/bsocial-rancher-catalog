@@ -36,7 +36,9 @@ wp-bsocial-new:
     unhealthy_threshold: 3
     strategy: recreate
     healthy_threshold: 2
-    response_timeout: 25
+    response_timeout: 100
+  metadata:
+    io.rancher.service.hash: 7104b3122ec3d0e3319d394072bca44a84d315be
 
 wp-mysql:
   load_balancer_config:
