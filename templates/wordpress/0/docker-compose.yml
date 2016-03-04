@@ -4,11 +4,11 @@ wp-bsocial-new:
   environment:
     app_name: ${NAME}
     enable_pagespeed: ${PAGESPEED}
-    SESSION_MCACHE_SERVS: tcp://wp-memcached:11211
-    WP_DB_HOST: wp-galeria-lb
+    SESSION_MCACHE_SERVS : "tcp://wp-memcached:11211"
+    WP_DB_HOST : wp-galeria-lb
     WP_DB_NAME : ${DBNAME}
-  external_links:
-  - "couchbase/memached-cb:wp-memcached"
+  external_links :
+  - couchbase/memached-cb:wp-memcached
   tty: true
   image: eu.gcr.io/carbide-ratio-704/${NAME}:latest
   volumes:

@@ -1,10 +1,8 @@
 name: Wordpress
- description: |
-    bSocial Base Wordpress
+ description: bSocial Base Wordpress
  version: 2.1
- category: Web# Category to be used for searching catalog entries
- maintainer: bsocial.io # The maintainer of the catalog entry
- license: Proprietary# The license
- projectURL: http://www.bsocial.io # A URL related to the catalog entryname: # Name of the Catalog Entry
- description: |
-    Very cool.
+ category: Web
+ maintainer: bsocial.io
+ license: Proprietar
+ projectURL: http://www.bsocial.io
+ description: Very cool.
