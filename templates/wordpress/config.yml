@@ -1,8 +1,8 @@
 name: Wordpress
- description: bSocial Base Wordpress
- version: 2.1
- category: Web
- maintainer: bsocial.io
- license: Proprietar
- projectURL: http://www.bsocial.io
- description: Very cool.
+description: bSocial Base Wordpress
+version: 2.1
+category: Web
+maintainer: bsocial.io
+license: Proprietar
+projectURL: http://www.bsocial.io
+description: Very cool.
