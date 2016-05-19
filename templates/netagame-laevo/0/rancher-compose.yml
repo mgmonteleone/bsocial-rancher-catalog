@@ -42,24 +42,6 @@
       type: string
       required : true
 
-    - variable : "NETENT_MERCHANTID"
-      label : "Netent merchant id"
-      description : "Merchant id used for netent tournaments."
-      type: string
-      required : false
-    - variable : "NETENT_PASSWORD"
-      label : "Netent merchant password"
-      description : "Merchant password used for netent tournaments."
-      type: string
-      required : false
-    - variable : "NETENT_SOAPAPI"
-      label : "Netent SOAP Endpoint"
-      description : "Netent SOAP endpoint (full URL)."
-      type: string
-      required : false
-
-
-
     - variable : "DB-DATABASE"
       label : "Database Name"
       description : "usually the same as the instance name."
@@ -124,6 +106,28 @@
         - on
         - off
       default : off
+
+
+
+
+    - variable : "NETENT_MERCHANTID"
+      label : "Netent merchant id"
+      description : "Merchant id used for netent tournaments."
+      type: string
+      required : false
+    - variable : "NETENT_PASSWORD"
+      label : "Netent merchant password"
+      description : "Merchant password used for netent tournaments."
+      type: string
+      required : false
+    - variable : "NETENT_SOAPAPI"
+      label : "Netent SOAP Endpoint"
+      description : "Netent SOAP endpoint (full URL)."
+      type: string
+      required : false
+
+
+
 loadbalancer-services:
   load_balancer_config:
     haproxy_config: {}
