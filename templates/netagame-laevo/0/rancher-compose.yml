@@ -42,7 +42,7 @@
       type: string
       required : true
 
-     - variable : "NETENT_MERCHANTID"
+    - variable : "NETENT_MERCHANTID"
       label : "Netent merchant id"
       description : "Merchant id used for netent tournaments."
       type: string
