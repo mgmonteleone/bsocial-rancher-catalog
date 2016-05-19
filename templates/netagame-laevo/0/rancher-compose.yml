@@ -97,15 +97,15 @@
       type: multiline
       required : true
       default : |
-      array(
-        'jackpot' => "Jackpot Game",
-        '1' => "Video Slot",
-        '2' => "Slot Game",
-        '3' => "Table Game",
-        "4" => "Other Game",
-        "5" => "Lottery Game",
-        "6" => "Live Game"
-        );
+        array(
+          'jackpot' => "Jackpot Game",
+          '1' => "Video Slot",
+          '2' => "Slot Game",
+          '3' => "Table Game",
+          "4" => "Other Game",
+          "5" => "Lottery Game",
+          "6" => "Live Game"
+          );
 
     - variable : "CDN-ICON-URL"
       label : "CDN icon URL"
