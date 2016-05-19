@@ -1,0 +1,7 @@
+name: Netagame Laevo Stack
+description:  Current Netagame Gaming portal stack, uses mounted files. Includes redis.
+version: 2.0
+category: Web
+maintainer: mgm@bsocial.io
+license: Proprietary
+projectURL: http://www.bsocial.io
