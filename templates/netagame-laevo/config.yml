@@ -1,7 +1,10 @@
-name: Netagame Laevo Stack
-description:  Current Netagame Gaming portal stack, uses mounted files. Includes redis.
+name: Netagame Laevo Casino Portal
+description: |
+  Current Netagame Gaming portal stack, uses mounted files.
+  Includes a Redis container for sessions.
+  Reqruires a database to already be created and web files to be copied to the /web/[name] directory.
 version: 2.0a
 category: Web
-maintainer: mgm@bsocial.io
+maintainer: mgm@netagame.com
 license: Proprietary
-projectURL: http://www.bsocial.io
+projectURL: http://www.netagame.com
