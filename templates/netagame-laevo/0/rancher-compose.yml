@@ -11,7 +11,7 @@
       required : true
     - variable : "NAME"
       label : "Instance Name"
-      description : "The instance name, used to find the folder to mount. (/web/[instance name])."
+      description : "The instance name,  used to find the folder to mount. (/web/[instance name])."
       type: string
       required : true
     - variable : "DOMAINNAME"
