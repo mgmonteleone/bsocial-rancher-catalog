@@ -42,28 +42,28 @@
       type: string
       required : false
 
-    - variable : "DB-DATABASE"
+    - variable : "DB_DATABASE"
       label : "Database Name"
       description : "usually the same as the instance name."
       type: string
       required : false
-    - variable : "DB-HOSTNAME"
+    - variable : "DB_HOSTNAME"
       label : "Database Hostname/IP"
       description : "THe host name or IP address of the mysql cluster."
       type: string
       required : false
-    - variable : "DB-USERNAME"
+    - variable : "DB_USERNAME"
       label : "Database Username"
       description : "The username to be used to connect to the mysql cluster."
       type: string
       required : false
-    - variable : "DB-PASSWORD"
+    - variable : "DB_PASSWORD"
       label : "Database password"
       description : "The password to be used to connect to the mysql cluster."
       type: string
       required : false
 
-    - variable : "CATEGORY-METHOD"
+    - variable : "CATEGORY_METHOD"
       label : "Category Method"
       description : "Games Sorting Method, can be sorted or categorized."
       type: enum
@@ -72,7 +72,7 @@
         - sorted
         - categorized
       default : sorted
-    - variable : "CATEGORY-TYPES"
+    - variable : "CATEGORY_TYPES"
       label : "Category Types"
       description : "PHP array of category types."
       type: multiline
@@ -88,7 +88,7 @@
           "6" => "Live Game"
           );
 
-    - variable : "CDN-ICON-URL"
+    - variable : "CDN_ICON_URL"
       label : "CDN icon URL"
       description : "Location of the Icon on CDN"
       type: string
@@ -109,17 +109,17 @@
 
 
 
-    - variable : "NETENT-MERCHANTID"
+    - variable : "NETENT_MERCHANTID"
       label : "Netent merchant id"
       description : "Merchant id used for netent tournaments."
       type: string
       required : false
-    - variable : "NETENT-PASSWORD"
+    - variable : "NETENT_PASSWORD"
       label : "Netent merchant password"
       description : "Merchant password used for netent tournaments."
       type: string
       required : false
-    - variable : "NETENT-SOAPAPI"
+    - variable : "NETENT_SOAPAPI"
       label : "Netent SOAP Endpoint"
       description : "Netent SOAP endpoint (full URL)."
       type: string
