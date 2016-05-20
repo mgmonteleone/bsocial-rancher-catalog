@@ -10,8 +10,8 @@ MobileApp-Apache:
   tty: true
   image: dkrs.co/netagame-laevo
   volumes:
-  - /logs/{NAME}:/var/log/apache2
-  - /web/{NAME}/m:/var/www/html
+  - /logs/${NAME}:/var/log/apache2
+  - /web/${NAME}/m:/var/www/html
   stdin_open: true
   environment:
     ENABLE_PAGESPEED: ${PAGESPEED}
@@ -36,8 +36,8 @@ BaseApp-Apache:
   tty: true
   image: dkrs.co/netagame-laevo
   volumes:
-  - /logs/{NAME}:/var/log/apache2
-  - /web/{NAME}:/var/www/html
+  - /logs/${NAME}:/var/log/apache2
+  - /web/${NAME}:/var/www/html
   stdin_open: true
   environment:
     ENABLE_PAGESPEED: ${PAGESPEED}
@@ -62,8 +62,8 @@ AffiliatesApp-Apache:
   tty: true
   image: dkrs.co/netagame-laevo
   volumes:
-  - /logs/{NAME}:/var/log/apache2
-  - /web/{NAME}/affiliates:/var/www/html
+  - /logs/${NAME}:/var/log/apache2
+  - /web/${NAME}/affiliates:/var/www/html
   stdin_open: true
   environment:
     ENABLE_PAGESPEED: ${PAGESPEED}
