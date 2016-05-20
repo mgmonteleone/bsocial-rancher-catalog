@@ -53,9 +53,9 @@ LoadBalancer-services:
   - ${PORT}:80
   labels:
     io.rancher.scheduler.global: 'true'
-    io.rancher.loadbalancer.target.AffiliatesApp-Apache: affiliates.{DOMAINNAME}=80,affiliates-dashboard.{DOMAINNAME}=80
-    io.rancher.loadbalancer.target.BaseApp-Apache: {DOMAINNAME}=80,www.{DOMAINNAME}=80,affiliate.{DOMAINNAME}=80,dashboard.{DOMAINNAME}=80,move.{DOMAINNAME}=80
-    io.rancher.loadbalancer.target.MobileApp-Apache: m.{DOMAINNAME}=80,mobile-dashboard.{DOMAINNAME}=80
+    io.rancher.loadbalancer.target.AffiliatesApp-Apache: affiliates.${DOMAINNAME}=80,affiliates-dashboard.${DOMAINNAME}=80
+    io.rancher.loadbalancer.target.BaseApp-Apache: ${DOMAINNAME}=80,www.${DOMAINNAME}=80,affiliate.${DOMAINNAME}=80,dashboard.${DOMAINNAME}=80,move.${DOMAINNAME}=80
+    io.rancher.loadbalancer.target.MobileApp-Apache: m.${DOMAINNAME}=80,mobile-dashboard.${DOMAINNAME}=80
   tty: true
   image: rancher/load-balancer-service
   links:
