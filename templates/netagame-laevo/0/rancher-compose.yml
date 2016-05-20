@@ -2,7 +2,7 @@
   name: "Netagame Laevo "
   version: "v1.0"
   description: "Netagame Casino Portal Platform with mounted source, multiple service containers and Redis for Sessions."
-  uuid: laevo-2
+  uuid: laevo-4
   questions:
     - variable : "PORT"
       label : "Mapped Port"
