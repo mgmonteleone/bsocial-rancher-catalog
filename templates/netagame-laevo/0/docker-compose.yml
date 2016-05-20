@@ -50,7 +50,7 @@ AffiliatesApp-Apache:
   stdin_open: true
 LoadBalancer-services:
   ports:
-  - {$PORT}:80
+  - ${PORT}:80
   labels:
     io.rancher.scheduler.global: 'true'
     io.rancher.loadbalancer.target.AffiliatesApp-Apache: affiliates.{DOMAINNAME}=80,affiliates-dashboard.{DOMAINNAME}=80
