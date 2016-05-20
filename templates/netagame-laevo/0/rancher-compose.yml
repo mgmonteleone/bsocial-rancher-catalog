@@ -1,6 +1,6 @@
 .catalog:
   name: "Netagame Laevo "
-  version: "v2.0"
+  version: "v1.0"
   description: "Netagame Casino Portal Platform with mounted source, multiple service containers and Redis for Sessions."
   uuid: laevo-2
   questions:
@@ -63,7 +63,7 @@
       type: string
       required : true
 
-    - variable : "CATEGORY_METHOD"
+    - variable : "CATEGORY-METHOD"
       label : "Category Method"
       description : "Games Sorting Method, can be sorted or categorized."
       type: enum
@@ -72,8 +72,7 @@
         - sorted
         - categorized
       default : sorted
-
-    - variable : "CATEGORY_TYPES"
+    - variable : "CATEGORY-TYPES"
       label : "Category Types"
       description : "PHP array of category types."
       type: multiline
@@ -110,17 +109,17 @@
 
 
 
-    - variable : "NETENT_MERCHANTID"
+    - variable : "NETENT-MERCHANTID"
       label : "Netent merchant id"
       description : "Merchant id used for netent tournaments."
       type: string
       required : false
-    - variable : "NETENT_PASSWORD"
+    - variable : "NETENT-PASSWORD"
       label : "Netent merchant password"
       description : "Merchant password used for netent tournaments."
       type: string
       required : false
-    - variable : "NETENT_SOAPAPI"
+    - variable : "NETENT-SOAPAPI"
       label : "Netent SOAP Endpoint"
       description : "Netent SOAP endpoint (full URL)."
       type: string

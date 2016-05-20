@@ -2,8 +2,8 @@ name: Netagame Laevo Casino Portal
 description: |
   Current Netagame Gaming portal stack, uses mounted files.
   Includes a Redis container for sessions.
-  Reqruires a database to already be created and web files to be copied to the /web/[name] directory.
-version: 2.0a
+  Requires a database to already be created and web files to be copied to the /web/[name] directory.
+version: 2.1
 category: Web
 maintainer: mgm@netagame.com
 license: Proprietary

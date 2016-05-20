@@ -14,12 +14,22 @@ MobileApp-Apache:
   - /web/{NAME}/m:/var/www/html
   stdin_open: true
   environment:
-    enable_pagespeed: ${PAGESPEED}
+    ENABLE_PAGESPEED: ${PAGESPEED}
     DB_HOSTNAME : ${DB-HOSTNAME}
     DB_DATABASE : ${DB-DATABASE}
     DB_PASSWORD : ${DB-PASSWORD}
     DB_USERNAME : ${DB-USERNAME}
     BASE_URL : ${BASE_URL}
+    SUPPORT_EMAIL : ${SUPPORT_EMAIL}
+    MOBILE_URL : ${MOBILE_URL}
+    DASHBOARD_HOST : ${DASHBOARD_HOST}
+    CATEGORY_METHOD : ${CATEGORY-METHOD}
+    CATEGORY_TYPES : ${CATEGORY-TYPES}
+    CDN-ICON-URL : ${CDN-ICON-URL}
+    NETENT_MERCHANTID : ${NETENT-MERCHANTID}
+    NETENT_PASSWORD : ${NETENT-PASSWORD}
+    NETENT_SOAPAPI : ${NETENT-SOAPAPI}
+
 BaseApp-Apache:
   labels:
     io.rancher.container.pull_image: always
