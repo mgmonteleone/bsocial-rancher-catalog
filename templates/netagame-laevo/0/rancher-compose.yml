@@ -29,45 +29,45 @@
       label : "Support email address"
       description : "The support email address to be used for the portal."
       type: string
-      required : true
+      required : false
 
     - variable : "MOBILE_URL"
       label : "Full URL for the Mobile site."
       description : "The full URL for the mobile site redirection. (usually m.[baseurl] ."
       type: string
-      required : true
+      required : false
     - variable : "DASHBOARD_HOST"
       label : "Dashboard host"
       description : "The hostname for the dashboard, usually dashboard.[baseurl] ."
       type: string
-      required : true
+      required : false
 
     - variable : "DB-DATABASE"
       label : "Database Name"
       description : "usually the same as the instance name."
       type: string
-      required : true
+      required : false
     - variable : "DB-HOSTNAME"
       label : "Database Hostname/IP"
       description : "THe host name or IP address of the mysql cluster."
       type: string
-      required : true
+      required : false
     - variable : "DB-USERNAME"
       label : "Database Username"
       description : "The username to be used to connect to the mysql cluster."
       type: string
-      required : true
+      required : false
     - variable : "DB-PASSWORD"
       label : "Database password"
       description : "The password to be used to connect to the mysql cluster."
       type: string
-      required : true
+      required : false
 
     - variable : "CATEGORY-METHOD"
       label : "Category Method"
       description : "Games Sorting Method, can be sorted or categorized."
       type: enum
-      required : true
+      required : false
       options :
         - sorted
         - categorized
@@ -76,7 +76,7 @@
       label : "Category Types"
       description : "PHP array of category types."
       type: multiline
-      required : true
+      required : false
       default : |
         array(
           'jackpot' => "Jackpot Game",
@@ -92,7 +92,7 @@
       label : "CDN icon URL"
       description : "Location of the Icon on CDN"
       type: string
-      required : true
+      required : false
       default : "https://netagame1-netagame.netdna-ssl.com/gameIcons/B_250x190/"
 
 
