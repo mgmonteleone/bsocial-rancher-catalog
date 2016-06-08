@@ -1,0 +1,139 @@
+.catalog:
+  name: "Netagame Laevo "
+  version: "v1.2"
+  description: "Netagame Casino Portal Platform with mounted source, multiple service containers and Redis for Sessions."
+  uuid: laevo-5
+  questions:
+    - variable : "PORT"
+      label : "Mapped Port"
+      description : "The port that the app accelerator(Nginx) will use to access the instance."
+      type : int
+      required : true
+    - variable : "NAME"
+      label : "Instance Name"
+      description : "The instance name,  used to find the folder to mount. (/web/[instance name])."
+      type: string
+      required : true
+    - variable : "DOMAINNAME"
+      label : "Domain Name"
+      description : "The base domain name, with no subdomain, used to map the various apps in the service Balancer."
+      type: string
+      required : true
+    - variable : "BASEURL"
+      label : "Full Base URL."
+      description : "The base URL including the http(s):// prefix."
+      type: string
+      required : true
+
+    - variable : "SUPPORT_EMAIL"
+      label : "Support email address"
+      description : "The support email address to be used for the portal."
+      type: string
+      required : false
+
+    - variable : "MOBILE_URL"
+      label : "Full URL for the Mobile site."
+      description : "The full URL for the mobile site redirection. (usually m.[baseurl] ."
+      type: string
+      required : false
+    - variable : "DASHBOARD_HOST"
+      label : "Dashboard host"
+      description : "The hostname for the dashboard, usually dashboard.[baseurl] ."
+      type: string
+      required : false
+
+    - variable : "DB_DATABASE"
+      label : "Database Name"
+      description : "usually the same as the instance name."
+      type: string
+      required : false
+    - variable : "DB_HOSTNAME"
+      label : "Database Hostname/IP"
+      description : "THe host name or IP address of the mysql cluster."
+      type: string
+      required : false
+    - variable : "DB_USERNAME"
+      label : "Database Username"
+      description : "The username to be used to connect to the mysql cluster."
+      type: string
+      required : false
+    - variable : "DB_PASSWORD"
+      label : "Database password"
+      description : "The password to be used to connect to the mysql cluster."
+      type: string
+      required : false
+
+    - variable : "CATEGORY_METHOD"
+      label : "Category Method"
+      description : "Games Sorting Method, can be sorted or categorized."
+      type: enum
+      required : false
+      options :
+        - sorted
+        - categorized
+      default : sorted
+    - variable : "CATEGORY_TYPES"
+      label : "Category Types"
+      description : "PHP array of category types."
+      type: multiline
+      required : false
+      default : |
+        array(
+          'jackpot' => "Jackpot Game",
+          '1' => "Video Slot",
+          '2' => "Slot Game",
+          '3' => "Table Game",
+          "4" => "Other Game",
+          "5" => "Lottery Game",
+          "6" => "Live Game"
+          );
+
+    - variable : "CDN_ICON_URL"
+      label : "CDN icon URL"
+      description : "Location of the Icon on CDN"
+      type: string
+      required : false
+      default : "https://netagame1-netagame.netdna-ssl.com/gameIcons/B_250x190/"
+
+
+    - variable : "PAGESPEED"
+      label : "Enable Pagespeed?"
+      description : "Should pagespeed be used automatically to enhance performance?"
+      type: enum
+      required : true
+      options :
+        - on
+        - off
+      default : off
+
+
+
+
+    - variable : "NETENT_MERCHANTID"
+      label : "Netent merchant id"
+      description : "Merchant id used for netent tournaments."
+      type: string
+      required : false
+    - variable : "NETENT_PASSWORD"
+      label : "Netent merchant password"
+      description : "Merchant password used for netent tournaments."
+      type: string
+      required : false
+    - variable : "NETENT_SOAPAPI"
+      label : "Netent SOAP Endpoint"
+      description : "Netent SOAP endpoint (full URL)."
+      type: string
+      required : false
+
+
+
+loadbalancer-services:
+  load_balancer_config:
+    haproxy_config: {}
+  health_check:
+    port: 42
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+

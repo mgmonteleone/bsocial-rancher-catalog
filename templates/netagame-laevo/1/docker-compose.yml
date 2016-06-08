@@ -1,3 +1,14 @@
+util-clear-nginx-cache:
+  labels:
+    io.rancher.scheduler.global: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.container.start_once: 'true'
+  tty: true
+  image: dkrs.co/util-nginx-cache
+  volumes:
+  - /data/nginx/cache/${NAME}/:/cache
+  stdin_open: true
+
 redis:
   labels:
     io.rancher.container.pull_image: always
