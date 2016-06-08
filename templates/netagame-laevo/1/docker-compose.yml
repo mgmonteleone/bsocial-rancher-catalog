@@ -1,3 +1,13 @@
+ng-memcached:
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  command:
+  - -m
+  - 128M
+  image: memcached
+  stdin_open: true
+
 util-clear-nginx-cache:
   labels:
     io.rancher.scheduler.global: 'true'
